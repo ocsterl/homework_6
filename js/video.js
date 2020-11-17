@@ -61,6 +61,6 @@ document.querySelector('#old').addEventListener('click', function(){
 	video.classList.add("oldTime");
 });
 
-document.querySelector('#video').addEventListener('click', function(){
+document.querySelector('#original').addEventListener('click', function(){
 	video.classList.remove("oldTime");
 });
