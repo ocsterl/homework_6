@@ -36,6 +36,7 @@ document.querySelector("#skip").addEventListener("click", function() {
 	else{
 		video.currentTime = video.currentTime + 5.0;
 	}
+	console.log("Updated Time:" + currentTime)
 });
 
 document.querySelector("#mute").addEventListener("click", function() {
@@ -53,9 +54,13 @@ document.querySelector("#volumeSlider").addEventListener("change", function() {
 	console.log(this);
 	console.log(this.value);
 	document.querySelector("#volume").innerHTML = this.value + "%";
-	video.volunme = this.value/100;
+	video.volume = (this.value / 100);
 });
 
 document.querySelector('#old').addEventListener('click', function(){
 	video.classList.add("oldTime");
+});
+
+document.querySelector('#video').addEventListener('click', function(){
+	video.classList.remove("oldTime");
 });
